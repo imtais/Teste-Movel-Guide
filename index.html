@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+<title>Imóvel Guide</title>
+</head>
+<body>
+    <header>
+        <nav id="navbar">
+            <i class="fa-solid fa-" id="nav_logo">
+                <img src="imagens/log.png" alt="logo">
+            </i>
+
+            <div id="desktop">
+            <div id="left">
+                <ul id="nav_list">
+
+                <li class="nav-item">
+                    <a href="#condominios">Condomínios</a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="#forum">Fórum</a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="#guia">Guia</a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="#artigos">Artigos</a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="#ferramentas">Ferramentas</a>
+                </li>
+                </ul>
+            </div>
+
+            <div id="right">
+                <ul id="nav_list">
+
+                <li class="nav-item">
+                    <a href="#cotar">Cotar Imóvel</a>
+                </li>
+
+                <li class="nav-item active">
+                    <a href="#planos">Planos</a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="#entrar">Entrar</a>
+                </li>
+
+                <button class="btn-cadastro">
+                    Cadastro
+                </button>
+                </ul>
+            </div>
+            </div>
+            
+            <div id="menu-icon" onclick="toggleMenu()">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </nav>
+
+        <div id="mobile_menu">
+            <ul id="mobile_nav_list">
+                <li class="nav-item">
+                    <a href="#condominios">Condomínios</a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="#forum">Fórum</a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="#guia">Guia</a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="#artigos">Artigos</a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="#ferramentas">Ferramentas</a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="#cotar">Cotar Imóvel</a>
+                </li>
+
+                <li class="nav-item active">
+                    <a href="#planos">Planos</a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="#entrar">Entrar</a>
+                </li>
+
+                <button class="btn-cadastro">
+                    Cadastro
+                </button>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <div class="wrapper">
+            <div class="box1">
+                <div class="numero">1</div>
+                <div class="conteudo">
+                    <div class="item" id="item1">
+                    <div class="img-container">
+                        <img src="imagens/corretor1.png" class="backgroung-img">
+                    </div>
+                        <div class="informacoes">
+                        <h3>Nome Corrretora</h3>
+                        <p>3.000 pontos</p>
+                        <p class="telefone" onclick="mostrarTelefone('item1')">ver telefone</p>
+                        <p id="numero-telefone-item1" class="hidden">(99) 99999-9999</p>
+                    </div>
+                </div>
+                        <br>
+                        <div class="item" id="item2">
+                            <div class="img-container">
+                        <img src="imagens/corretor2.png" alt="" class="backgroung-img">
+                    </div>
+                        <div class="informacoes">
+                        <h3>Nome Corretor</h3>
+                        <p>1.260 pontos</p>
+                        <p class="telefone" onclick="mostrarTelefone('item2')">ver telefone</p>
+                        <p id="numero-telefone-item2" class="hidden">(99) 99999-9999</p>
+                    </div>
+                </div>
+            </div>
+            </div>
+            
+            <div class="box2">
+                <div class="numero">2</div>
+                <div class="conteudo">
+                    <form id="message-form">
+                    <h1>Mande uma mensagem:</h1>
+                        <input type="text" id="cpf" placeholder="Digite seu CPF" maxlength="14">
+                        <input type="text" id="telefone" placeholder="Digite seu telefone" minlength="15" maxlength="15" rows="1">
+                        <textarea id="assunto" placeholder="Digite seu o assunto" minlength="10" maxlength="30" rows="5"></textarea>
+                    <button type="submit">Enviar mensagem</button>
+                </form>
+                </div>
+            </div>
+            
+            <div class="box3">
+                <div class="numero">3</div>
+                <div class="conteudo3">
+                    <h1>Regra de 3</h1>
+                    <div class="input">
+                    <textarea id="entrada1" name="entrada1" placeholder="60" rows="1"></textarea>
+                    <p class="linha">______</p>
+                    <textarea id="entrada2" name="entrada2" placeholder="100" rows="1"></textarea>
+                </div>
+                    <div class="input">
+                    <textarea id="entrada3" name="entrada3" placeholder="30" rows="1"></textarea>
+                    <p class="linha">______</p>
+                    <textarea id="resultado" name="resultado" placeholder="" rows="1"></textarea>
+                </div>
+                    <button class="button3" onclick="regraDeTres()">Calcular</button>
+                    <script src="scripts.js"></script>
+                </div>
+            </div>
+            
+            <div class="box4">
+                <div class="numero">4</div>
+                <div class="conteudo">
+                    <img src="imagens/imovel.png" alt="">
+                </div>
+            </div>
+
+            <div class="box5">
+                <div class="numero">5</div>
+                <div class="conteudo">
+                    <img src="imagens/imovel.png" alt="">
+                    <div class="btn-container">
+                        <button type="submit" class="btn-imovel">Imovel Guide</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="box6">
+                <div class="numero">6</div>
+                <div class="conteudo">
+                    <img src="imagens/imovel.png" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class="download-container">
+            <button type="button" class="btn-download">Download</button>
+        </div>
+      
+        <div class="modal-container">
+            <button type="button" id="abrirModal" class="btn-modal">ABRIR IMAGEM NO MODAL</button>
+        </div>
+        <div id="modal" class="modal">
+            <div class="conteudo-modal">
+                <span class="close">&times;</span>
+                <div class="modalImg">
+                <img src="imagens/imovel.png" alt="imagem do modal">
+            </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="rodape">
+        <div id="left">
+        <nav id="navbar">
+        <ul id="nav_list">
+            <li class="nav-item">
+                <a href="#termos">Termos</a>
+            </li>
+            <li class="nav-item">
+                <a href="#contato">Contato</a>
+            </li>
+            <li class="nav-item">
+                <a href="#sobre">Sobre</a>
+            </li>
+        </ul>
+        </nav>
+    </div>
+
+    <div id="right">
+        &copy; Copyright 2022 - Todos os direitos reservados.
+        <i class="fa-solid fa-" id="footer_logo">
+            <img src="imagens/log.png" alt="logo">
+        </i>
+    </div>
+    </footer>
+</body>
+
+</html>
